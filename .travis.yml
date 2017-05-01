@@ -3,7 +3,7 @@ language: python
 services:
   - docker
 script:
-  -  docker build -t kalyzee/nginx-rtmp
+  -  docker build -t kalyzee/nginx-rtmp .
 after_success:
   - if [ "$TRAVIS_BRANCH" == "master" ]; then
       docker login -u="$DOCKER_USERNAME" -p="$DOCKER_PASSWORD";
